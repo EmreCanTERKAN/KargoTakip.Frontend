@@ -50,6 +50,17 @@
       "linter": "eslint",
       "style": "css",
       "unitTestRunner": "jest"
+    },
+    "@schematics/angular:component": {
+      "changeDetection": "OnPush",
+      "viewEncapsulation": "None",
+      "style": "none",
+      "skipTests": true,
+      "skipSelector": true,
+      "exportDefault": true
+    },
+    "@nx/angular:component": {
+      "style": "css"
     }
   }
 }

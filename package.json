@@ -12,6 +12,8 @@
     "@angular/platform-browser": "~19.2.0",
     "@angular/platform-browser-dynamic": "~19.2.0",
     "@angular/router": "~19.2.0",
+    "@tpacks/flexigrid": "^1.0.2",
+    "flexi-grid": "^19.0.53",
     "rxjs": "~7.8.0",
     "zone.js": "~0.15.0"
   },

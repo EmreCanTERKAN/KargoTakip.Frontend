@@ -9,8 +9,8 @@ export const appRoutes: Route[] = [
         path: "",
         loadComponent: () => import("./pages/home/home.component")
       },      {
-        path: "kargolarim",
-        loadComponent: () => import("./pages/kargolarim/kargolarim.component")
+        path: "kargolar",
+        loadComponent: () => import("./pages/kargolar/kargolar.component")
       }
     ]
   }

@@ -1,0 +1,47 @@
+<div class="app-content-header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <h3 class="mb-0">Kargolar</h3>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-end">
+          <li class="breadcrumb-item"><a routerLink="/">Ana Sayfa</a></li>
+          <li class="breadcrumb-item active" aria-current="page" routerLink="kargolar">Kargolar</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="app-content">
+  <flexi-grid language="tr"
+   [data]="data()!"
+   [dataBinding]="true"
+   [total]="total()!"
+   [loading]="loading()"
+   [showCaption]="true"
+   captionTitle="Kargo Listesi"
+   >
+
+    <flexi-grid-column field="createAt" title="Kayıt Tarihi" filterType="date" format="dd MMM yyy HH:mm" />
+    <flexi-grid-column field="gonderenFullName" title="Gönderen Adı"/>
+    <flexi-grid-column field="aliciFullName" title="Alıcı Adı"/>
+    <flexi-grid-column field="teslimAdresiCity" title="Teslim Şehir" />
+    <flexi-grid-column field="teslimAdresiTown" title="Teslim İlçe"/>
+    <flexi-grid-column field="kargoTipiName" title="Kargonun Tipi" />
+    <flexi-grid-column field="kargoDurumName" title="Kargonun Durumu"/>
+    <flexi-grid-column field="agirlik" title="Kargonun ağırlığı(kg)"/>
+    <flexi-grid-column field="createUserName" title="Kayıt yapan kullanıcı"/>
+    <flexi-grid-column field="updateAt" title="Güncelleme Tarihi" filterType="date" format="dd MMM yyy HH:mm" />
+    <flexi-grid-column field="updateUserName" title="Kayıt eden kullanıcı"/>
+    <flexi-grid-column field="deleteAt" title="Silinme tarihi"/>
+
+
+    <ng-template  flexiGridColumnCommandTemplate  let-item>
+      <flexi-button btnSize="x-small" btnIcon="delete" btnColor="danger" title="Sil" flexiTooltip=""/>
+    </ng-template>
+  </flexi-grid>
+</div>
+
+

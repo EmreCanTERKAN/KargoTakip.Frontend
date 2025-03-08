@@ -4,9 +4,12 @@ import { RouterLink } from '@angular/router';
 import { lastValueFrom } from 'rxjs';
 import { ODataModel } from '../../models/odata.model';
 import { FlexiGridModule, FlexiGridService, StateModel } from 'flexi-grid';
+import { BreadcrumbService } from '../../services/breadcrumb.service';
+import { BreadCrumbModel } from '../../models/breadcrumb.model';
+import BlankComponent from '../../components/blank/blank.component';
 
 @Component({
-  imports: [RouterLink, FlexiGridModule],
+  imports: [RouterLink, FlexiGridModule, BlankComponent],
   templateUrl: './kargolar.component.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -33,6 +36,24 @@ export default class KargolarComponent {
 
   #http = inject(HttpClient);
   #grid = inject(FlexiGridService);
+  #breadCrumb = inject(BreadcrumbService);
+
+  constructor(){
+    const breadCrumbs: BreadCrumbModel[] = [
+      {
+        name:"Ana Sayfa",
+        routerLink: "/",
+        icon: "home"
+      },
+      {
+        name:"Kargolar",
+        routerLink: "/kargolar",
+        icon: "package_2"
+      }
+    ];
+
+    this.#breadCrumb.data.set(breadCrumbs);
+  }
 
   dataStateChange(event:StateModel){
     this.state.set(event);

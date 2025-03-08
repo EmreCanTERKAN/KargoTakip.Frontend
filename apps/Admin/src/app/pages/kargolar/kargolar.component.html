@@ -1,20 +1,4 @@
-<div class="app-content-header">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-6">
-        <h3 class="mb-0">Kargolar</h3>
-      </div>
-      <div class="col-sm-6">
-        <ol class="breadcrumb float-sm-end">
-          <li class="breadcrumb-item"><a routerLink="/">Ana Sayfa</a></li>
-          <li class="breadcrumb-item active" aria-current="page" routerLink="kargolar">Kargolar</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="app-content">
+<app-blank pageTitle="Kargolar">
   <flexi-grid language="tr"
   [data]="data()!"
   [dataBinding]="true"
@@ -45,6 +29,6 @@
       <flexi-button btnSize="x-small" btnIcon="delete" btnColor="danger" title="Sil" flexiTooltip=""/>
     </ng-template>
   </flexi-grid>
-</div>
+</app-blank>
 
 

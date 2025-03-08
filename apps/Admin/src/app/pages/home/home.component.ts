@@ -13,15 +13,7 @@ export default class HomeComponent {
     #breadCrumb = inject(BreadcrumbService);
 
     constructor(){
-      const breadCrumbs: BreadCrumbModel[] = [
-        {
-          name:"Ana Sayfa",
-          routerLink: "/",
-          icon: "home"
-        }
-      ];
-
-      this.#breadCrumb.data.set(breadCrumbs);
+      this.#breadCrumb.reset();
     }
 
 }

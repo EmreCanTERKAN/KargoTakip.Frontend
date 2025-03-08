@@ -39,20 +39,8 @@ export default class KargolarComponent {
   #breadCrumb = inject(BreadcrumbService);
 
   constructor(){
-    const breadCrumbs: BreadCrumbModel[] = [
-      {
-        name:"Ana Sayfa",
-        routerLink: "/",
-        icon: "home"
-      },
-      {
-        name:"Kargolar",
-        routerLink: "/kargolar",
-        icon: "package_2"
-      }
-    ];
-
-    this.#breadCrumb.data.set(breadCrumbs);
+    this.#breadCrumb.reset();
+    this.#breadCrumb.add("Kargolarım","/kargolar","package_2");
   }
 
   dataStateChange(event:StateModel){

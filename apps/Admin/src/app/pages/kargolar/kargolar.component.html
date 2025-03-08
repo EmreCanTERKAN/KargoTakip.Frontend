@@ -16,13 +16,16 @@
 
 <div class="app-content">
   <flexi-grid language="tr"
-   [data]="data()!"
-   [dataBinding]="true"
-   [total]="total()!"
-   [loading]="loading()"
-   [showCaption]="true"
-   captionTitle="Kargo Listesi"
-   >
+  [data]="data()!"
+  [dataBinding]="true"
+  [total]="total()!"
+  [loading]="loading()"
+  [showCaption]="true"
+  captionTitle="Kargo Listesi"
+  (onRefresh)="result.reload()"
+  (dataStateChange)="dataStateChange($event)"
+  [showExportExcelBtn]="true"
+  >
 
     <flexi-grid-column field="createAt" title="Kayıt Tarihi" filterType="date" format="dd MMM yyy HH:mm" />
     <flexi-grid-column field="gonderenFullName" title="Gönderen Adı"/>

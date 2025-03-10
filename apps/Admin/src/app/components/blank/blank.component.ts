@@ -1,9 +1,8 @@
 import { ChangeDetectionStrategy, Component, input, ViewEncapsulation } from '@angular/core';
-import LayoutComponent from "../../layout/layout.component";
 
 @Component({
   selector: "app-blank",
-  imports: [LayoutComponent],
+  imports: [],
   templateUrl: './blank.component.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush

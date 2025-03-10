@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject, ViewEncapsulation } from '@angular/core';
 import { BreadcrumbService } from '../../services/breadcrumb.service';
-import { BreadCrumbModel } from '../../models/breadcrumb.model';
 import BlankComponent from '../../components/blank/blank.component';
 
 @Component({

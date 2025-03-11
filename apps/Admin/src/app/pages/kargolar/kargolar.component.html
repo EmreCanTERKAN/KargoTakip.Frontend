@@ -11,7 +11,7 @@
   [exportExcelButtonClick]="exportExcel.bind(this)"
   fontSize="15px"
   [useCommandDropdown]="false"
-  colm
+  commandColumnWidth="150px"
   >
   <ng-template flexiGridCaptionCommandTemplate >
     <flexi-button routerLink="/kargolar/create" btnSize="small" btnColor="primary" title="Kargo Ekle" flexiTooltip btnIcon="add" />
@@ -46,7 +46,7 @@
       <flexi-grid-column field="updateAt" title="Gün.Tar." filterType="date" format="dd MMM yyyy HH:mm:ss" />
       <flexi-grid-column field="updateUserName" title="Gün.Kul." />
 
-      <ng-template #commandColumnTemplate let-item>
+      <ng-template  flexiGridColumnCommandTemplate let-item>
         <flexi-button btnSize="x-small" btnIcon="rotate_90_degrees_cw" btnColor="info" title="Durum Değiştir" flexiTooltip (click)="openUpdateDurumPopup(item)" />
         @if(item.kargoDurumValue === "0"){
           <flexi-button

@@ -16,19 +16,19 @@ Bu proje, kargo takibini kolaylaştırmak için geliştirilmiş bir Angular uygu
 
 ### 🔑 Giriş Sayfası
 
-![Login Page](./public/assets/login.png)
+![Login Page](./apps/Admin/public/assets/img/login.png)
 
 ### 🏠 Kargo Ekleme Paneli
 
-![Create Cargo](./public/assets/kargo-kayit.png)
+![Create Cargo](./apps/Admin/public/assets/img/kargo-kayit.png)
 
 ### 📦 Kargo Listesi
 
-![Cargo List](./public/assets/list.png)
+![Cargo List](./apps/Admin/public/assets/img/list.png)
 
 ### 📦 Excel Listesi Çekme
 
-![Cargo List](./public/assets/excel.png)
+![Cargo List](./apps/Admin/public/assets/img/excel.png)
 
 ## 🛠️ Kurulum ve Çalıştırma
 
